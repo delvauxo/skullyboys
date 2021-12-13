@@ -1,0 +1,127 @@
+html {
+    font-size: 62.5%;
+    position: relative;
+    color: white;
+    // z-index: -1;
+    &::before {
+        content: "";
+        background: url(./img/background.webp) fixed;
+        background-size: 100% auto;
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+    }
+    // &::after {
+    //     content: "";
+    //     position: fixed;
+    //     inset: 0;
+    //     background: rgba(0, 0, 0, 0.3);
+    //     z-index: -1;
+    // } 
+}
+
+// * {
+//     outline:red 1px solid ;
+// }
+
+#background-video video {
+    z-index: -1;
+    grid-area: video;
+    min-width: 100vw;
+    max-width: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    object-fit: cover;
+    opacity: .5;
+    background-attachment: fixed;
+    background-position: 50%;
+    background-repeat: repeat;
+    background-size: 110% auto;
+    filter: hue-rotate(
+99deg) brightness(1) saturate(6.5);
+    -webkit-filter: hue-rotate(
+99deg) brightness(1) saturate(6.5);
+    position: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+header {
+    padding: 50px;
+    height: 100vh;
+    overflow: hidden;
+    // background-color: rgb(236, 22, 22);
+    > #hero {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 0 auto;
+        max-width: 1200px;
+        > * {
+            border: solid cyan 1px;
+        }
+        .img--container {
+            position: relative;
+            #necklace {
+            position: absolute;
+            width: 45%;
+            top: 22.5%;
+            left: 31.3%;
+        }
+        }
+    }
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+// .flex {
+    //     display: flex;
+    // }
+    
+    // .flex--v {
+        //     display: flex;
+        //     flex-direction: column;
+        // }
+        
+nav {
+    #logo a{
+        max-width: 60px;
+        // max-height: 100px;
+        display: block;
+    }
+            
+    > ul {
+        display: flex;
+        gap: 20px;
+        li:first-of-type {
+            flex: 1;
+        }
+    }
+} 
+
+img {
+    // background: black;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#hero {
+    display: flex;
+    > div {
+        width: 500px;
+    }
+}
+
+.exemple {
+
+}

@@ -1,0 +1,174 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  position: relative;
+  color: white;
+}
+
+html::before {
+  content: "";
+  background: url(./img/background.webp) fixed;
+  background-size: 100% auto;
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+}
+
+#background-video video {
+  z-index: -1;
+  grid-area: video;
+  min-width: 100vw;
+  max-width: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: .5;
+  background-attachment: fixed;
+  background-position: 50%;
+  background-repeat: repeat;
+  background-size: 110% auto;
+  filter: hue-rotate(99deg) brightness(1) saturate(6.5);
+  -webkit-filter: hue-rotate(99deg) brightness(1) saturate(6.5);
+  position: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+header {
+  padding: 50px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header > #hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header > #hero > * {
+  border: solid cyan 1px;
+}
+
+header > #hero .img--container {
+  position: relative;
+}
+
+header > #hero .img--container #necklace {
+  position: absolute;
+  width: 45%;
+  top: 22.5%;
+  left: 31.3%;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+nav #logo a {
+  max-width: 60px;
+  display: block;
+}
+
+nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+nav > ul li:first-of-type {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#hero > div {
+  width: 500px;
+}
+/*# sourceMappingURL=style.css.map */
