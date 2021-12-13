@@ -59,7 +59,7 @@ table {
 
 @font-face {
   font-family: 'bones';
-  src: url("./fonts/bones.woff2") format("woff2"), url("./fonts/bones.woff") format("woff");
+  src: url("./fonts/Bones.woff2") format("woff2"), url("./fonts/Bones.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
