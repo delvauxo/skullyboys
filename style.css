@@ -180,6 +180,9 @@ header > #hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 30px;
   max-width: 1600px;
   height: 100%;
