@@ -6,6 +6,14 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'autograf';
+    src: url('./fonts/Autograf.woff2') format('woff2'),
+         url('./fonts/Autograf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 .txt--bones {
     font-family: "bones";

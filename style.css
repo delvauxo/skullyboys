@@ -64,6 +64,13 @@ table {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'autograf';
+  src: url("./fonts/Autograf.woff2") format("woff2"), url("./fonts/Autograf.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .txt--bones {
   font-family: "bones";
 }
@@ -179,6 +186,15 @@ header {
           align-items: center;
 }
 
+@media screen and (max-width: 720px) {
+  header {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    max-height: none;
+  }
+}
+
 header > #hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,7 +203,17 @@ header > #hero {
   max-width: 1600px;
   height: 100%;
   width: 100%;
+  position: relative;
   margin-top: auto;
+}
+
+@media screen and (max-width: 720px) {
+  header > #hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 header > #hero > * {
@@ -196,6 +222,12 @@ header > #hero > * {
 
 header > #hero .img--container {
   position: relative;
+}
+
+@media screen and (max-width: 720px) {
+  header > #hero .img--container img {
+    max-height: 90vh;
+  }
 }
 
 header > #hero .img--container #necklace {
@@ -225,8 +257,8 @@ header > #hero #hero__slogan--container {
 header > #hero #hero__slogan--container #hero__title {
   width: 100%;
   max-height: 100%;
-  padding: 10%;
-  margin-bottom: -5%;
+  padding: 10% 10% 0 10%;
+  position: relative;
 }
 
 header > #hero #hero__slogan--container #hero__title svg {
@@ -236,14 +268,127 @@ header > #hero #hero__slogan--container #hero__title svg {
           filter: drop-shadow(0 0 15px #FF00CC);
 }
 
+header > #hero #hero__slogan--container #hero__title::after {
+  content: "Bonnes Club";
+  position: absolute;
+  bottom: -10%;
+  right: 0;
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  font-size: 3vw;
+  color: #ff00cc;
+  font-family: 'autograf';
+}
+
+@media screen and (min-width: 2150px) {
+  header > #hero #hero__slogan--container #hero__title::after {
+    font-size: 2.3vw;
+    bottom: -10%;
+    right: -2%;
+  }
+}
+
 header > #hero #hero__slogan--container #hero__subtitle {
   font-size: 4rem;
   text-align: center;
   line-height: 3rem;
 }
 
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  25% {
+    -webkit-transform: translate(-20px, -10px);
+            transform: translate(-20px, -10px);
+  }
+  50% {
+    -webkit-transform: translate(5px, -20px);
+            transform: translate(5px, -20px);
+  }
+  75% {
+    -webkit-transform: translate(-10px, 5px);
+            transform: translate(-10px, 5px);
+  }
+  0% {
+    -webkit-transform: translate(-20px, -10px);
+            transform: translate(-20px, -10px);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  25% {
+    -webkit-transform: translate(-20px, -10px);
+            transform: translate(-20px, -10px);
+  }
+  50% {
+    -webkit-transform: translate(5px, -20px);
+            transform: translate(5px, -20px);
+  }
+  75% {
+    -webkit-transform: translate(-10px, 5px);
+            transform: translate(-10px, 5px);
+  }
+  0% {
+    -webkit-transform: translate(-20px, -10px);
+            transform: translate(-20px, -10px);
+  }
+}
+
 h1 {
   font-size: 5rem;
+}
+
+@-webkit-keyframes roar {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(-5px, 2px) rotate(5deg);
+            transform: translate(-5px, 2px) rotate(5deg);
+  }
+  50% {
+    -webkit-transform: translate(-2px, 3px) rotate(-2deg);
+            transform: translate(-2px, 3px) rotate(-2deg);
+  }
+  75% {
+    -webkit-transform: translate(3px, 0) rotate(2deg);
+            transform: translate(3px, 0) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes roar {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(-5px, 2px) rotate(5deg);
+            transform: translate(-5px, 2px) rotate(5deg);
+  }
+  50% {
+    -webkit-transform: translate(-2px, 3px) rotate(-2deg);
+            transform: translate(-2px, 3px) rotate(-2deg);
+  }
+  75% {
+    -webkit-transform: translate(3px, 0) rotate(2deg);
+            transform: translate(3px, 0) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
 }
 
 nav {
@@ -251,13 +396,25 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  padding: 0 50px;
+  padding: 20px 70px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff00cc3b), to(transparent));
+  background: linear-gradient(180deg, #ff00cc3b, transparent);
+  z-index: 10;
 }
 
 nav #logo a {
   max-width: 60px;
   display: block;
   padding: 20px 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+nav #logo a:hover {
+  -webkit-animation: 0.5s roar;
+          animation: 0.5s roar;
+  -webkit-filter: invert(66%) sepia(57%) saturate(5023%) hue-rotate(304deg) brightness(150%) contrast(109%);
+          filter: invert(66%) sepia(57%) saturate(5023%) hue-rotate(304deg) brightness(150%) contrast(109%);
 }
 
 nav > ul {

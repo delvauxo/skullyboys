@@ -92,14 +92,23 @@ header {
     // background-color: rgb(236, 22, 22);
     // border: solid cyan 1px;
     align-items: center;
+    @include phone {
+        height: max-content;
+        max-height:none;
+    }
     > #hero {
         display: flex;
         gap: 30px;
         max-width: 1600px;
         height: 100%;
         width: 100%;
+        // z-index: 10;
+        position: relative;
         // margin: 0 auto;
         margin-top: auto;
+        @include phone {
+            flex-direction: column;
+        }
         > * {
             // border: solid cyan 1px;
             // height: 100%;
@@ -107,6 +116,12 @@ header {
         }
         .img--container {
             position: relative;
+            img {
+                
+                @include phone {
+                    max-height:90vh;
+                }
+            }
             // max-width: 50%;
             // height: 500px;
             #necklace {
@@ -126,16 +141,47 @@ header {
             justify-content: center;
             position: relative;
             max-height: 100%;
+            
             #hero__title {
                 width: 100%;
                 max-height: 100%;
-                padding: 10%;
-                margin-bottom: -5%;
+                padding: 10% 10% 0 10%;
+                // margin-bottom: -5%;
+                position: relative;
                 svg {
                     width: 100%;
                     height: 100%;
                     filter: drop-shadow(0 0 15px #FF00CC);
+                    // path.pathh {
+                    //     transition: .5s;
+                    //     transform-origin: center;
+                    // }
+                    // &:hover {
+                    //     path.pathh {
+                    //         filter: drop-shadow(0 0 15px #1b9ab1);
+                    //         fill: rgb(59, 181, 197);
+                    //         transform: rotate(60deg);
+                    //     }
+                    // }
                 }
+                &::after {
+                    content: "Bonnes Club";
+                    position: absolute;
+                    bottom: -10%;
+                    right: 0;
+                    max-width: min-content;
+                    font-size: 3vw;
+                    // transform: translate(-50%,-50%);
+                    color: #ff00cc;
+                    font-family: 'autograf';
+                    // background-color: red;
+                    @media screen and (min-width:2150px) {
+                        font-size: 2.3vw;
+                        bottom: -10%;
+                        right: -2%;
+                        
+                    }
+                } 
                 
             }
             #hero__subtitle {
@@ -147,8 +193,44 @@ header {
     }
 }
 
+@keyframes shake {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(-20px, -10px);
+    }
+    50% {
+        transform: translate(5px, -20px);
+    }
+    75% {
+        transform: translate(-10px, 5px);
+    }
+    0% {
+        transform: translate(-20px, -10px);
+    }
+}
+
 h1 {
     font-size: 5rem;
+}
+
+@keyframes roar {
+    0% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(-5px, 2px) rotate(5deg);
+    }
+    50% {
+        transform: translate(-2px, 3px) rotate(-2deg);
+    }
+    75% {
+        transform: translate(3px, 0) rotate(2deg);
+    }
+    100% {
+        transform: translate(0);
+    }
 }
 
 // .flex {
@@ -163,13 +245,31 @@ h1 {
 nav {
     position: fixed;
     top: 0; left: 0; right: 0;
-    padding: 0 50px;
+    padding: 20px 70px;
+    background: linear-gradient(180deg, #ff00cc3b ,transparent);
+    // background: rgba(255, 255, 255, 0.05);
+    // backdrop-filter: blur(20px);
+        // box-shadow: inset 0 40px 70px #ff00cc49;
+    z-index: 10;
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     inset: 0;
+    //     // border: 1px solid #ff00cc ;
+    //     box-shadow: inset 0 0 40px #ff00cc31;
+    //     z-index: -5;
+    // }
     // background: red;
     #logo a{
         max-width: 60px;
         // max-height: 100px;
         display: block;
         padding: 20px 0;
+        transition: .5s;
+        &:hover {
+            animation: 0.5s roar ;
+            filter: invert(66%) sepia(57%) saturate(5023%) hue-rotate(304deg) brightness(150%) contrast(109%);
+        }
     }
             
     > ul {
