@@ -174,18 +174,19 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header > #hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 30px;
   max-width: 1600px;
   height: 100%;
+  width: 100%;
   margin-top: auto;
 }
 
@@ -218,17 +219,19 @@ header > #hero #hero__slogan--container {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  max-height: 100%;
 }
 
 header > #hero #hero__slogan--container #hero__title {
   width: 100%;
+  max-height: 100%;
   padding: 10%;
-  margin-bottom: -50px;
+  margin-bottom: -5%;
 }
 
 header > #hero #hero__slogan--container #hero__title svg {
   width: 100%;
-  height: auto;
+  height: 100%;
   -webkit-filter: drop-shadow(0 0 15px #FF00CC);
           filter: drop-shadow(0 0 15px #FF00CC);
 }
