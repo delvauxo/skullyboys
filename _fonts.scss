@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'bones';
+    src: url('./fonts/bones.woff2') format('woff2'),
+         url('./fonts/bones.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.txt--bones {
+    font-family: "bones";
+}
+
+.txt--700 {
+    font-weight: 700;
+}

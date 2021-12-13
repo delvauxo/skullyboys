@@ -20,6 +20,18 @@ html {
     // } 
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+    background: rgb(36, 36, 36);
+    // &-track {
+
+    // }
+    &-thumb {
+        background: #ff00cc;
+        border: 2px solid rgb(36, 36, 36);
+    }
+}
+
 // * {
 //     outline:red 1px solid ;
 // }
@@ -53,28 +65,81 @@ body {
     font-size: 1.6rem;
 }
 
+@keyframes blink {
+    0% {
+        filter: hue-rotate(120deg) brightness(1.5);
+    }
+    50% {
+        filter: hue-rotate(360deg) brightness(1) grayscale(0);
+    }
+    75% {
+        filter: hue-rotate(360deg) brightness(1) grayscale(0.8);
+    }
+    100% {
+        filter: hue-rotate(120deg) brightness(1.5) grayscale(0);
+    }
+}
+
+
 header {
-    padding: 50px;
+    padding: 100px 50px 0 50px;
     height: 100vh;
-    overflow: hidden;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    // justify-content:flex-end;
+    // overflow: hidden;
     // background-color: rgb(236, 22, 22);
+    // border: solid cyan 1px;
     > #hero {
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         gap: 30px;
-        margin: 0 auto;
-        max-width: 1200px;
+        max-width: 1600px;
+        height: 100%;
+        margin-top: auto;
         > * {
-            border: solid cyan 1px;
+            // border: solid cyan 1px;
+            // height: 100%;
+            width: 100%;
         }
         .img--container {
             position: relative;
+            // max-width: 50%;
+            // height: 500px;
             #necklace {
-            position: absolute;
-            width: 45%;
-            top: 22.5%;
-            left: 31.3%;
+                position: absolute;
+                // width: 35%;
+                inset: 0;
+                animation: blink 2s infinite alternate-reverse;
+                // top: 21%;
+                // left: 31.3%;
+            }
         }
+        #hero__slogan--container {
+            // width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            #hero__title {
+                width: 100%;
+                // height: 100%;
+                padding: 10%;
+                margin-bottom: -50px;
+                svg {
+                    width: 100%;
+                    height: auto;
+                    filter: drop-shadow(0 0 15px #FF00CC);
+                }
+                
+            }
+            #hero__subtitle {
+                font-size: 4rem;
+                text-align: center;
+                line-height: 3rem;
+            }
         }
     }
 }
@@ -93,14 +158,20 @@ h1 {
         // }
         
 nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding: 0 50px;
+    // background: red;
     #logo a{
         max-width: 60px;
         // max-height: 100px;
         display: block;
+        padding: 20px 0;
     }
             
     > ul {
         display: flex;
+        align-items: center;
         gap: 20px;
         li:first-of-type {
             flex: 1;
@@ -115,13 +186,4 @@ img {
     object-fit: contain;
 }
 
-#hero {
-    display: flex;
-    > div {
-        width: 500px;
-    }
-}
 
-.exemple {
-
-}

@@ -57,6 +57,21 @@ table {
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'bones';
+  src: url("./fonts/bones.woff2") format("woff2"), url("./fonts/bones.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.txt--bones {
+  font-family: "bones";
+}
+
+.txt--700 {
+  font-weight: 700;
+}
+
 html {
   font-size: 62.5%;
   position: relative;
@@ -70,6 +85,16 @@ html::before {
   position: fixed;
   inset: 0;
   z-index: -2;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: #242424;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff00cc;
+  border: 2px solid #242424;
 }
 
 #background-video video {
@@ -100,26 +125,69 @@ body {
   font-size: 1.6rem;
 }
 
+@-webkit-keyframes blink {
+  0% {
+    -webkit-filter: hue-rotate(120deg) brightness(1.5);
+            filter: hue-rotate(120deg) brightness(1.5);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg) brightness(1) grayscale(0);
+            filter: hue-rotate(360deg) brightness(1) grayscale(0);
+  }
+  75% {
+    -webkit-filter: hue-rotate(360deg) brightness(1) grayscale(0.8);
+            filter: hue-rotate(360deg) brightness(1) grayscale(0.8);
+  }
+  100% {
+    -webkit-filter: hue-rotate(120deg) brightness(1.5) grayscale(0);
+            filter: hue-rotate(120deg) brightness(1.5) grayscale(0);
+  }
+}
+
+@keyframes blink {
+  0% {
+    -webkit-filter: hue-rotate(120deg) brightness(1.5);
+            filter: hue-rotate(120deg) brightness(1.5);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg) brightness(1) grayscale(0);
+            filter: hue-rotate(360deg) brightness(1) grayscale(0);
+  }
+  75% {
+    -webkit-filter: hue-rotate(360deg) brightness(1) grayscale(0.8);
+            filter: hue-rotate(360deg) brightness(1) grayscale(0.8);
+  }
+  100% {
+    -webkit-filter: hue-rotate(120deg) brightness(1.5) grayscale(0);
+            filter: hue-rotate(120deg) brightness(1.5) grayscale(0);
+  }
+}
+
 header {
-  padding: 50px;
+  padding: 100px 50px 0 50px;
   height: 100vh;
-  overflow: hidden;
+  max-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 header > #hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 30px;
-  margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1600px;
+  height: 100%;
+  margin-top: auto;
 }
 
 header > #hero > * {
-  border: solid cyan 1px;
+  width: 100%;
 }
 
 header > #hero .img--container {
@@ -128,24 +196,71 @@ header > #hero .img--container {
 
 header > #hero .img--container #necklace {
   position: absolute;
-  width: 45%;
-  top: 22.5%;
-  left: 31.3%;
+  inset: 0;
+  animation: blink 2s infinite alternate-reverse;
+}
+
+header > #hero #hero__slogan--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+header > #hero #hero__slogan--container #hero__title {
+  width: 100%;
+  padding: 10%;
+  margin-bottom: -50px;
+}
+
+header > #hero #hero__slogan--container #hero__title svg {
+  width: 100%;
+  height: auto;
+  -webkit-filter: drop-shadow(0 0 15px #FF00CC);
+          filter: drop-shadow(0 0 15px #FF00CC);
+}
+
+header > #hero #hero__slogan--container #hero__subtitle {
+  font-size: 4rem;
+  text-align: center;
+  line-height: 3rem;
 }
 
 h1 {
   font-size: 5rem;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 50px;
+}
+
 nav #logo a {
   max-width: 60px;
   display: block;
+  padding: 20px 0;
 }
 
 nav > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 20px;
 }
 
@@ -160,15 +275,5 @@ img {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-#hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#hero > div {
-  width: 500px;
 }
 /*# sourceMappingURL=style.css.map */
