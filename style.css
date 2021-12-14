@@ -440,6 +440,22 @@ nav > ul li:first-of-type {
           flex: 1;
 }
 
+nav > ul li:not(:first-of-type) a {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+nav > ul li:not(:first-of-type) a img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+nav > ul li:not(:first-of-type):hover a img {
+  -webkit-filter: invert(27%) sepia(100%) saturate(7010%) hue-rotate(305deg) brightness(108%) contrast(113%);
+          filter: invert(27%) sepia(100%) saturate(7010%) hue-rotate(305deg) brightness(108%) contrast(113%);
+}
+
 img {
   width: 100%;
   height: 100%;

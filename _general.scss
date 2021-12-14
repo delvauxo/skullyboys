@@ -299,6 +299,23 @@ nav {
         li:first-of-type {
             flex: 1;
         }
+
+        li:not(:first-of-type) {
+
+            a {
+                display: block;
+                width: 36px;
+                height: 36px;
+                
+                img {
+                    filter: invert(100%);
+                }
+            }
+
+            &:hover a img {
+                filter: invert(27%) sepia(100%) saturate(7010%) hue-rotate(305deg) brightness(108%) contrast(113%);
+            }
+        }
     }
 } 
 
