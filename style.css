@@ -83,6 +83,9 @@ html {
   font-size: 62.5%;
   position: relative;
   color: white;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #f0c #2c2c2c;
 }
 
 html::before {
@@ -94,16 +97,6 @@ html::before {
   z-index: -2;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-  background: #242424;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #ff00cc;
-  border: 2px solid #242424;
-}
-
 #background-video video {
   z-index: -1;
   grid-area: video;
@@ -113,7 +106,7 @@ html::before {
   max-height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: .5;
+  opacity: 0.5;
   background-attachment: fixed;
   background-position: 50%;
   background-repeat: repeat;
@@ -264,22 +257,22 @@ header > #hero #hero__slogan--container #hero__title {
 header > #hero #hero__slogan--container #hero__title svg {
   width: 100%;
   height: 100%;
-  -webkit-filter: drop-shadow(0 0 15px #FF00CC);
-          filter: drop-shadow(0 0 15px #FF00CC);
+  -webkit-filter: drop-shadow(0 0 15px #ff00cc);
+          filter: drop-shadow(0 0 15px #ff00cc);
 }
 
-header > #hero #hero__slogan--container #hero__title #hero__title__after--container {
+header > #hero #hero__slogan--container #hero__title svg #hero__title__after--container {
   position: absolute;
   inset: 0;
 }
 
-header > #hero #hero__slogan--container #hero__title #hero__title__after--container::after {
+header > #hero #hero__slogan--container #hero__title svg #hero__title__after--container::after {
   content: "Bonnes Club";
   max-width: -webkit-min-content;
   max-width: -moz-min-content;
   max-width: min-content;
   color: #ff00cc;
-  font-family: 'autograf';
+  font-family: "autograf";
   font-size: 2.5vw;
   position: absolute;
   right: 0;
@@ -289,14 +282,14 @@ header > #hero #hero__slogan--container #hero__title #hero__title__after--contai
 }
 
 @media screen and (max-width: 720px) {
-  header > #hero #hero__slogan--container #hero__title #hero__title__after--container::after {
+  header > #hero #hero__slogan--container #hero__title svg #hero__title__after--container::after {
     font-size: 4.5vw;
     -webkit-transform: translate(-10%, 40%);
             transform: translate(-10%, 40%);
   }
 }
 
-header > #hero #hero__slogan--container #hero__subtitle {
+header > #hero #hero__slogan--container #hero__title #hero__subtitle {
   font-size: 4rem;
   text-align: center;
   line-height: 3rem;
@@ -413,17 +406,20 @@ nav #logo a {
   max-width: 60px;
   display: block;
   padding: 20px 0;
-  -webkit-transition: -webkit-filter .5s;
-  transition: -webkit-filter .5s;
-  transition: filter .5s;
-  transition: filter .5s, -webkit-filter .5s;
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
 }
 
-nav #logo a:hover {
-  -webkit-animation: 0.5s roar;
-          animation: 0.5s roar;
-  -webkit-filter: invert(66%) sepia(57%) saturate(5023%) hue-rotate(304deg) brightness(150%) contrast(109%);
-          filter: invert(66%) sepia(57%) saturate(5023%) hue-rotate(304deg) brightness(150%) contrast(109%);
+nav #logo a:hover svg g {
+  fill: #ff00cc;
+}
+
+nav #logo a svg g {
+  -webkit-transition: fill 0.25s ease-in-out;
+  transition: fill 0.25s ease-in-out;
+  fill: white;
 }
 
 nav > ul {
@@ -454,8 +450,8 @@ nav > ul li:not(:first-of-type) a svg {
 }
 
 nav > ul li:not(:first-of-type) a svg g {
-  -webkit-transition: fill .25s ease-in-out;
-  transition: fill .25s ease-in-out;
+  -webkit-transition: fill 0.25s ease-in-out;
+  transition: fill 0.25s ease-in-out;
   fill: white;
 }
 
