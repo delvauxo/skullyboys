@@ -268,24 +268,31 @@ header > #hero #hero__slogan--container #hero__title svg {
           filter: drop-shadow(0 0 15px #FF00CC);
 }
 
-header > #hero #hero__slogan--container #hero__title::after {
-  content: "Bonnes Club";
+header > #hero #hero__slogan--container #hero__title #hero__title__after--container {
   position: absolute;
-  bottom: -10%;
-  right: 0;
+  inset: 0;
+}
+
+header > #hero #hero__slogan--container #hero__title #hero__title__after--container::after {
+  content: "Bonnes Club";
   max-width: -webkit-min-content;
   max-width: -moz-min-content;
   max-width: min-content;
-  font-size: 3vw;
   color: #ff00cc;
   font-family: 'autograf';
+  font-size: 2.5vw;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(-20%, 30%);
+          transform: translate(-20%, 30%);
 }
 
-@media screen and (min-width: 2150px) {
-  header > #hero #hero__slogan--container #hero__title::after {
-    font-size: 2.3vw;
-    bottom: -10%;
-    right: -2%;
+@media screen and (max-width: 720px) {
+  header > #hero #hero__slogan--container #hero__title #hero__title__after--container::after {
+    font-size: 4.5vw;
+    -webkit-transform: translate(-10%, 40%);
+            transform: translate(-10%, 40%);
   }
 }
 

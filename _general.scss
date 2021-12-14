@@ -164,24 +164,44 @@ header {
                     //     }
                     // }
                 }
-                &::after {
-                    content: "Bonnes Club";
+                #hero__title__after--container {
                     position: absolute;
-                    bottom: -10%;
-                    right: 0;
-                    max-width: min-content;
-                    font-size: 3vw;
-                    // transform: translate(-50%,-50%);
-                    color: #ff00cc;
-                    font-family: 'autograf';
-                    // background-color: red;
-                    @media screen and (min-width:2150px) {
-                        font-size: 2.3vw;
-                        bottom: -10%;
-                        right: -2%;
-                        
+                    inset: 0;
+                    
+                    &::after {
+                        content: "Bonnes Club";
+                        max-width: min-content;
+                        color: #ff00cc;
+                        font-family: 'autograf';
+                        font-size: 2.5vw;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        transform: translate(-20%, 30%);
+                        @include phone {
+                            font-size: 4.5vw;
+                            transform: translate(-10%, 40%);
+                        }
                     }
-                } 
+                }
+                // &::before {
+                //     content: "Bonnes Club";
+                //     position: absolute;
+                //     bottom: -10%;
+                //     right: 0;
+                //     max-width: min-content;
+                //     font-size: 3vw;
+                //     // transform: translate(-50%,-50%);
+                //     color: #ff00cc;
+                //     font-family: 'autograf';
+                //     // background-color: red;
+                //     @media screen and (min-width:2150px) {
+                //         font-size: 2.3vw;
+                //         bottom: -10%;
+                //         right: -2%;
+                        
+                //     }
+                // } 
                 
             }
             #hero__subtitle {
