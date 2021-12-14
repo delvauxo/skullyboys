@@ -2,6 +2,9 @@ html {
     font-size: 62.5%;
     position: relative;
     color: white;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #f0c #2c2c2c;
     &::before {
         content: "";
         background: url(./img/background.webp) fixed;
