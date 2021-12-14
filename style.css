@@ -413,8 +413,10 @@ nav #logo a {
   max-width: 60px;
   display: block;
   padding: 20px 0;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
 }
 
 nav #logo a:hover {
@@ -446,14 +448,27 @@ nav > ul li:not(:first-of-type) a {
   height: 36px;
 }
 
-nav > ul li:not(:first-of-type) a img {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+nav > ul li:not(:first-of-type) a svg {
+  width: 100%;
+  height: 100%;
 }
 
-nav > ul li:not(:first-of-type):hover a img {
-  -webkit-filter: invert(27%) sepia(100%) saturate(7010%) hue-rotate(305deg) brightness(108%) contrast(113%);
-          filter: invert(27%) sepia(100%) saturate(7010%) hue-rotate(305deg) brightness(108%) contrast(113%);
+nav > ul li:not(:first-of-type) a svg g {
+  -webkit-transition: fill .25s ease-in-out;
+  transition: fill .25s ease-in-out;
+  fill: white;
+}
+
+nav > ul li:not(:first-of-type) a svg#icon-instagram {
+  width: 30px;
+}
+
+nav > ul li:not(:first-of-type) a svg#icon-twitter {
+  width: 32px;
+}
+
+nav > ul li:not(:first-of-type):hover a svg g {
+  fill: #ff00cc;
 }
 
 img {
