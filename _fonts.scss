@@ -14,9 +14,93 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'kittaro';
+    src: url('./fonts/Kittaro.woff2') format('woff2'),
+         url('./fonts/Kittaro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'noah_black';
+    src: url('./fonts/noahBlack.woff2') format('woff2'),
+         url('./fonts/noahBlack.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'noah_bold';
+    src: url('./fonts/noahBold.woff2') format('woff2'),
+         url('./fonts/noahBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'noah_extrabold';
+    src: url('./fonts/NoahExtrabold.woff2') format('woff2'),
+         url('./fonts/NoahExtrabold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'noah_heavy';
+    src: url('./fonts/NoahHeavy.woff2') format('woff2'),
+         url('./fonts/NoahHeavy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'noah_light';
+    src: url('./fonts/NoahLight.woff2') format('woff2'),
+         url('./fonts/NoahLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'noah_medium';
+    src: url('./fonts/NoahMedium.woff2') format('woff2'),
+         url('./fonts/NoahMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'noah_regular';
+    src: url('./fonts/NoahRegular.woff2') format('woff2'),
+         url('./fonts/NoahRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'noah_thin';
+    src: url('./fonts/NoahThin.woff2') format('woff2'),
+         url('./fonts/NoahThin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'noah_ultralight';
+    src: url('./fonts/NoahUltralight.woff2') format('woff2'),
+         url('./fonts/NoahUltralight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 .txt--bones {
     font-family: "bones";
+}
+
+.txt--pink {
+    color: #FF00CC;
 }
 
 .txt--700 {
