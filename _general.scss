@@ -1,254 +1,254 @@
 html {
-    font-size: 62.5%;
-    position: relative;
-    color: white;
-    scroll-behavior: smooth;
-    scrollbar-width: thin;
-    scrollbar-color: #f0c #2c2c2c;
-    &::before {
-        content: "";
-        background: url(./img/background.webp) fixed;
-        background-size: 100% auto;
-        position: fixed;
-        inset: 0;
-        z-index: -2;
-    }
+  font-size: 62.5%;
+  position: relative;
+  color: white;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #f0c #2c2c2c;
+  &::before {
+    content: "";
+    background: url(./img/background.webp) fixed;
+    background-size: 100% auto;
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+  }
 }
 
 #background-video video {
-    z-index: -1;
-    grid-area: video;
-    min-width: 100vw;
-    max-width: 100vh;
-    min-height: 100vh;
-    max-height: 100vh;
-    object-fit: cover;
-    opacity: 0.5;
-    background-attachment: fixed;
-    background-position: 50%;
-    background-repeat: repeat;
-    background-size: 110% auto;
-    filter: hue-rotate(99deg) brightness(1) saturate(6.5);
-    -webkit-filter: hue-rotate(99deg) brightness(1) saturate(6.5);
-    position: fixed;
+  z-index: -1;
+  grid-area: video;
+  min-width: 100vw;
+  max-width: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  object-fit: cover;
+  opacity: 0.5;
+  background-attachment: fixed;
+  background-position: 50%;
+  background-repeat: repeat;
+  background-size: 110% auto;
+  filter: hue-rotate(99deg) brightness(1) saturate(6.5);
+  -webkit-filter: hue-rotate(99deg) brightness(1) saturate(6.5);
+  position: fixed;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 @keyframes blink {
-    0% {
-        filter: hue-rotate(120deg) brightness(1.5);
-    }
-    50% {
-        filter: hue-rotate(360deg) brightness(1) grayscale(0);
-    }
-    75% {
-        filter: hue-rotate(360deg) brightness(1) grayscale(0.8);
-    }
-    100% {
-        filter: hue-rotate(120deg) brightness(1.5) grayscale(0);
-    }
+  0% {
+    filter: hue-rotate(120deg) brightness(1.5);
+  }
+  50% {
+    filter: hue-rotate(360deg) brightness(1) grayscale(0);
+  }
+  75% {
+    filter: hue-rotate(360deg) brightness(1) grayscale(0.8);
+  }
+  100% {
+    filter: hue-rotate(120deg) brightness(1.5) grayscale(0);
+  }
 }
 
 header {
-    padding: 100px 50px 0 50px;
-    height: 100vh;
-    max-height: 100vh;
+  padding: 100px 50px 0 50px;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include phone {
+    height: max-content;
+    max-height: none;
+  }
+  > #hero {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 30px;
+    max-width: 1600px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
     @include phone {
-        height: max-content;
-        max-height: none;
+      flex-direction: column;
     }
-    > #hero {
-        display: flex;
-        gap: 30px;
-        max-width: 1600px;
-        height: 100%;
-        width: 100%;
-        position: relative;
-        margin-top: auto;
+    > * {
+      width: 100%;
+    }
+    .img--container {
+      position: relative;
+      img {
         @include phone {
-            flex-direction: column;
+          max-height: 90vh;
         }
-        > * {
-            width: 100%;
-        }
-        .img--container {
-            position: relative;
-            img {
-                @include phone {
-                    max-height: 90vh;
-                }
-            }
-            #necklace {
-                position: absolute;
-                inset: 0;
-                animation: blink 2s infinite alternate-reverse;
-            }
-        }
-        #hero__slogan--container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            max-height: 100%;
-
-            #hero__title {
-                width: 100%;
-                max-height: 100%;
-                padding: 10% 10% 0 10%;
-                position: relative;
-                svg {
-                    width: 100%;
-                    height: 100%;
-                    filter: drop-shadow(0 0 15px #ff00cc);
-                    #hero__title__after--container {
-                        position: absolute;
-                        inset: 0;
-
-                        &::after {
-                            content: "Bonnes Club";
-                            max-width: min-content;
-                            color: #ff00cc;
-                            font-family: "autograf";
-                            font-size: 2.5vw;
-                            position: absolute;
-                            right: 0;
-                            bottom: 0;
-                            transform: translate(-20%, 30%);
-                            @include phone {
-                                font-size: 4.5vw;
-                                transform: translate(-10%, 40%);
-                            }
-                        }
-                    }
-                }
-                #hero__subtitle {
-                    font-size: 4rem;
-                    text-align: center;
-                    line-height: 3rem;
-                }
-            }
-        }
+      }
+      #necklace {
+        position: absolute;
+        inset: 0;
+        animation: blink 2s infinite alternate-reverse;
+      }
     }
+    #hero__slogan--container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      max-height: 100%;
+
+      #hero__title {
+        width: 100%;
+        max-height: 100%;
+        padding: 10% 10% 0 10%;
+        position: relative;
+        svg {
+          width: 100%;
+          height: 100%;
+          filter: drop-shadow(0 0 15px #ff00cc);
+        }
+        #hero__title__after--container {
+          position: absolute;
+          inset: 0;
+
+          &::after {
+            content: "Bones Club";
+            max-width: min-content;
+            color: #ff00cc;
+            font-family: "autograf";
+            font-size: 2.5vw;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: translate(-20%, 30%);
+            @include phone {
+              font-size: 4.5vw;
+              transform: translate(-10%, 40%);
+            }
+          }
+        }
+      }
+      #hero__subtitle {
+        font-size: 4rem;
+        text-align: center;
+        line-height: 3rem;
+      }
+    }
+  }
 }
 
 @keyframes shake {
-    0% {
-        transform: translate(0px, 0px);
-    }
-    25% {
-        transform: translate(-20px, -10px);
-    }
-    50% {
-        transform: translate(5px, -20px);
-    }
-    75% {
-        transform: translate(-10px, 5px);
-    }
-    0% {
-        transform: translate(-20px, -10px);
-    }
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-20px, -10px);
+  }
+  50% {
+    transform: translate(5px, -20px);
+  }
+  75% {
+    transform: translate(-10px, 5px);
+  }
+  0% {
+    transform: translate(-20px, -10px);
+  }
 }
 
 h1 {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 
 @keyframes roar {
-    0% {
-        transform: translate(0);
-    }
-    25% {
-        transform: translate(-5px, 2px) rotate(5deg);
-    }
-    50% {
-        transform: translate(-2px, 3px) rotate(-2deg);
-    }
-    75% {
-        transform: translate(3px, 0) rotate(2deg);
-    }
-    100% {
-        transform: translate(0);
-    }
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(-5px, 2px) rotate(5deg);
+  }
+  50% {
+    transform: translate(-2px, 3px) rotate(-2deg);
+  }
+  75% {
+    transform: translate(3px, 0) rotate(2deg);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 20px 70px;
-    background: linear-gradient(180deg, #ff00cc3b, transparent);
-    z-index: 10;
-    #logo a {
-        max-width: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 70px;
+  background: linear-gradient(180deg, #ff00cc3b, transparent);
+  z-index: 10;
+  #logo a {
+    max-width: 60px;
+    display: block;
+    padding: 20px 0;
+    transition: filter 0.5s;
+
+    &:hover svg g {
+      fill: #ff00cc;
+    }
+
+    svg g {
+      transition: fill 0.25s ease-in-out;
+      fill: white;
+    }
+  }
+
+  > ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    li:first-of-type {
+      flex: 1;
+    }
+
+    li:not(:first-of-type) {
+      a {
         display: block;
-        padding: 20px 0;
-        transition: filter 0.5s;
+        width: 36px;
+        height: 36px;
 
-        &:hover svg g {
-            fill: #ff00cc;
-        }
+        svg {
+          width: 100%;
+          height: 100%;
 
-        svg g {
+          & g {
             transition: fill 0.25s ease-in-out;
             fill: white;
+          }
+
+          &#icon-instagram {
+            width: 30px;
+          }
+
+          &#icon-twitter {
+            width: 32px;
+          }
         }
+      }
+
+      &:hover a svg g {
+        fill: #ff00cc;
+      }
     }
-
-    > ul {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        li:first-of-type {
-            flex: 1;
-        }
-
-        li:not(:first-of-type) {
-            a {
-                display: block;
-                width: 36px;
-                height: 36px;
-
-                svg {
-                    width: 100%;
-                    height: 100%;
-
-                    & g {
-                        transition: fill 0.25s ease-in-out;
-                        fill: white;
-                    }
-
-                    &#icon-instagram {
-                        width: 30px;
-                    }
-
-                    &#icon-twitter {
-                        width: 32px;
-                    }
-                }
-            }
-
-            &:hover a svg g {
-                fill: #ff00cc;
-            }
-        }
-    }
+  }
 }
 
 img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

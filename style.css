@@ -261,13 +261,13 @@ header > #hero #hero__slogan--container #hero__title svg {
           filter: drop-shadow(0 0 15px #ff00cc);
 }
 
-header > #hero #hero__slogan--container #hero__title svg #hero__title__after--container {
+header > #hero #hero__slogan--container #hero__title #hero__title__after--container {
   position: absolute;
   inset: 0;
 }
 
-header > #hero #hero__slogan--container #hero__title svg #hero__title__after--container::after {
-  content: "Bonnes Club";
+header > #hero #hero__slogan--container #hero__title #hero__title__after--container::after {
+  content: "Bones Club";
   max-width: -webkit-min-content;
   max-width: -moz-min-content;
   max-width: min-content;
@@ -282,14 +282,14 @@ header > #hero #hero__slogan--container #hero__title svg #hero__title__after--co
 }
 
 @media screen and (max-width: 720px) {
-  header > #hero #hero__slogan--container #hero__title svg #hero__title__after--container::after {
+  header > #hero #hero__slogan--container #hero__title #hero__title__after--container::after {
     font-size: 4.5vw;
     -webkit-transform: translate(-10%, 40%);
             transform: translate(-10%, 40%);
   }
 }
 
-header > #hero #hero__slogan--container #hero__title #hero__subtitle {
+header > #hero #hero__slogan--container #hero__subtitle {
   font-size: 4rem;
   text-align: center;
   line-height: 3rem;
