@@ -566,11 +566,11 @@ main section p {
 
 main section a.skully-btn {
   background-color: #000;
-  border: 1px solid #ff00cc1f;
+  border: 1px solid rgba(255, 0, 204, 0.15);
   color: white;
   padding: 15px 25px;
-  padding-bottom: 20px;
   border-radius: 10px;
+  position: relative;
 }
 
 main section a.skully-btn:hover {
@@ -578,20 +578,28 @@ main section a.skully-btn:hover {
           animation: anim-glow 2s ease infinite;
 }
 
-main section a.skully-btn:hover::after {
-  color: #ff00cc;
-  text-shadow: 0 20px 20px #fff, 0 0 2px #ff4da6;
+main section a.skully-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), color-stop(49%, rgba(255, 0, 204, 0.7)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 0, 204, 0.7) 49%, rgba(255, 255, 255, 0) 100%);
+  -webkit-transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
+  transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
 }
 
-main section a.skully-btn::after {
-  font-size: 2rem;
-  content: '\a ________';
-  white-space: pre;
-  color: white;
-  position: relative;
-  text-align: center;
-  display: block;
-  line-height: 0;
+main section a.skully-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), color-stop(49%, rgba(255, 0, 204, 0.7)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 0, 204, 0.7) 49%, rgba(255, 255, 255, 0) 100%);
   -webkit-transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
   transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
 }
@@ -654,8 +662,6 @@ main section::after {
   height: 1px;
   background-color: transparent;
   margin: 0 auto;
-  -webkit-box-shadow: 0 0 30px rgba(255, 0, 215, 0.8), 0 0 20px rgba(255, 0, 215, 0.6), 0 0 10px rgba(255, 0, 203, 0.4), 0 0 5px rgba(255, 0, 191, 0.2);
-          box-shadow: 0 0 30px rgba(255, 0, 215, 0.8), 0 0 20px rgba(255, 0, 215, 0.6), 0 0 10px rgba(255, 0, 203, 0.4), 0 0 5px rgba(255, 0, 191, 0.2);
   /* W3C */
   background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), color-stop(49%, #f0c), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #f0c 49%, rgba(255, 255, 255, 0) 100%);
