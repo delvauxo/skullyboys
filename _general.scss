@@ -15,17 +15,16 @@
 }
 
 @keyframes anim-glow {
-	0% {
-		box-shadow: 0 0 rgba(#ff00cc, 1);
-		border-width: 1px;
+  0% {
+    box-shadow: 0 0 rgba(#ff00cc, 1);
+    border-width: 1px;
     border-color: transparent;
-	}
-	100% {
-		box-shadow: 0 0 10px 8px transparent;
-		border-width: 1px;
-	}
+  }
+  100% {
+    box-shadow: 0 0 10px 8px transparent;
+    border-width: 1px;
+  }
 }
-
 
 // General.
 
@@ -77,9 +76,8 @@ img {
   display: none;
 }
 
-
 img[src] {
- display: block;
+  display: block;
 }
 
 header {
@@ -254,16 +252,16 @@ main section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, .5);
-  font-family: 'noah_regular';
+  background: rgba(0, 0, 0, 0.5);
+  font-family: "noah_regular";
   font-size: 2rem;
   border-left: 1px solid;
   border-right: 1px solid;
-  border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, .25)) 1;
+  border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
 
   &:first-of-type {
     border-top: 1px solid;
-    border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, .25)) 1;
+    border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
   }
 
   &:last-of-type {
@@ -275,14 +273,14 @@ main section {
   }
 
   h2 {
-    font-family: 'Kittaro';
+    font-family: "Kittaro";
     font-size: 4rem;
-    letter-spacing: .25rem;
+    letter-spacing: 0.25rem;
     position: relative;
-    filter: drop-shadow(0 0 10px #FF00CC);
+    filter: drop-shadow(0 0 10px #ff00cc);
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       left: 50%;
@@ -291,8 +289,12 @@ main section {
       width: 50%;
       margin: 0 auto;
       height: 2px;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #f0c 49%, rgba(255, 255, 255, 0) 100%);
-      
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0) 0%,
+        #f0c 49%,
+        rgba(255, 255, 255, 0) 100%
+      );
     }
   }
 
@@ -300,7 +302,7 @@ main section {
     padding: 0 50px;
     line-height: 1.2;
     text-align: center;
-}
+  }
 
   a.skully-btn {
     background-color: #000;
@@ -315,24 +317,34 @@ main section {
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
       height: 1px;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 0, 204, .7) 49%, rgba(255, 255, 255, 0) 100%);
-      transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 0, 204, 0.7) 49%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transition: text-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
     }
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 1px;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 0, 204, .7) 49%, rgba(255, 255, 255, 0) 100%);
-      transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 0, 204, 0.7) 49%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transition: text-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
     }
   }
 
@@ -341,14 +353,14 @@ main section {
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     inset: 0;
-    background-image: url('./img/logo.svg');
+    background-image: url("./img/logo.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    opacity: .04;
+    opacity: 0.04;
   }
 }

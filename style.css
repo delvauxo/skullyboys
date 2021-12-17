@@ -512,7 +512,7 @@ main section {
       -ms-flex-pack: center;
           justify-content: center;
   background: rgba(0, 0, 0, 0.5);
-  font-family: 'noah_regular';
+  font-family: "noah_regular";
   font-size: 2rem;
   border-left: 1px solid;
   border-right: 1px solid;
@@ -535,16 +535,16 @@ main section > *:not(:first-child) {
 }
 
 main section h2 {
-  font-family: 'Kittaro';
+  font-family: "Kittaro";
   font-size: 4rem;
-  letter-spacing: .25rem;
+  letter-spacing: 0.25rem;
   position: relative;
-  -webkit-filter: drop-shadow(0 0 10px #FF00CC);
-          filter: drop-shadow(0 0 10px #FF00CC);
+  -webkit-filter: drop-shadow(0 0 10px #ff00cc);
+          filter: drop-shadow(0 0 10px #ff00cc);
 }
 
 main section h2::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 50%;
@@ -579,7 +579,7 @@ main section a.skully-btn:hover {
 }
 
 main section a.skully-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -587,12 +587,12 @@ main section a.skully-btn::after {
   height: 1px;
   background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), color-stop(49%, rgba(255, 0, 204, 0.7)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 0, 204, 0.7) 49%, rgba(255, 255, 255, 0) 100%);
-  -webkit-transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
-  transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
+  -webkit-transition: text-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+  transition: text-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
 main section a.skully-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -600,8 +600,8 @@ main section a.skully-btn::before {
   height: 1px;
   background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), color-stop(49%, rgba(255, 0, 204, 0.7)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 0, 204, 0.7) 49%, rgba(255, 255, 255, 0) 100%);
-  -webkit-transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
-  transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
+  -webkit-transition: text-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+  transition: text-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
 main section#carousel {
@@ -609,7 +609,7 @@ main section#carousel {
 }
 
 main section::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   inset: 0;
@@ -617,7 +617,7 @@ main section::after {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: .04;
+  opacity: 0.04;
 }
 
 .gallery {
@@ -655,7 +655,7 @@ main section::after {
 }
 
 .gallery-container > #mirror-container::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 1px;
   width: 100%;
@@ -668,7 +668,7 @@ main section::after {
 }
 
 .gallery-container > #mirror-container #mirror {
-  opacity: .35;
+  opacity: 0.35;
 }
 
 .gallery-item {
@@ -683,7 +683,7 @@ main section::after {
 
 .gallery-item-1 {
   left: 15%;
-  opacity: .4;
+  opacity: 0.4;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -720,7 +720,7 @@ main section::after {
 
 .gallery-item-5 {
   left: 85%;
-  opacity: .4;
+  opacity: 0.4;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -757,7 +757,7 @@ main section::after {
 .gallery-controls-previous::before {
   border: solid #000;
   border-width: 0 2px 2px 0;
-  content: '';
+  content: "";
   display: inline-block;
   height: 4px;
   left: -10px;
@@ -782,7 +782,7 @@ main section::after {
 .gallery-controls-next::before {
   border: solid #000;
   border-width: 0 2px 2px 0;
-  content: '';
+  content: "";
   display: inline-block;
   height: 4px;
   padding: 2px;

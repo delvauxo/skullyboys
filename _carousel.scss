@@ -12,7 +12,6 @@
   max-width: 1000px;
   position: relative;
 
-
   > #mirror-container {
     position: absolute;
     left: calc(50% - 150px);
@@ -21,11 +20,17 @@
     width: 300px;
     z-index: 0;
     transform: scaleY(-1);
-    -webkit-mask-image:-webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(0, 0, 0, 1)),
+      to(rgba(0, 0, 0, 0))
+    );
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 1px;
       width: 100%;
@@ -33,11 +38,16 @@
       background-color: transparent;
       margin: 0 auto;
       /* W3C */
-      background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #f0c 49%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0) 0%,
+        #f0c 49%,
+        rgba(255, 255, 255, 0) 100%
+      );
     }
-    
+
     #mirror {
-      opacity: .35;
+      opacity: 0.35;
     }
   }
 }
@@ -53,7 +63,7 @@
 
 .gallery-item-1 {
   left: 15%;
-  opacity: .4;
+  opacity: 0.4;
   transform: translateX(-50%);
 }
 
@@ -86,7 +96,7 @@
 
 .gallery-item-5 {
   left: 85%;
-  opacity: .4;
+  opacity: 0.4;
   transform: translateX(-50%);
 }
 
@@ -118,7 +128,7 @@
 .gallery-controls-previous::before {
   border: solid #000;
   border-width: 0 2px 2px 0;
-  content: '';
+  content: "";
   display: inline-block;
   height: 4px;
   left: -10px;
@@ -141,7 +151,7 @@
 .gallery-controls-next::before {
   border: solid #000;
   border-width: 0 2px 2px 0;
-  content: '';
+  content: "";
   display: inline-block;
   height: 4px;
   padding: 2px;
