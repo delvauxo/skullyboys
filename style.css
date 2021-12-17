@@ -662,18 +662,22 @@ main section::after {
   background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #f0c 49%, rgba(255, 255, 255, 0) 100%);
 }
 
-.gallery-container > #mirror-container #mirror {
-  position: relative;
+.gallery-container > #mirror-container > img {
+  position: absolute;
   opacity: 0.5;
   left: 0;
   -webkit-transform: scaleY(-1);
           transform: scaleY(-1);
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: left .5s ease-in-out;
+  transition: left .5s ease-in-out;
   -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
   -webkit-mask-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
           mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
           mask-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+}
+
+.gallery-container > #mirror-container > img#mirror-right {
+  left: 500px;
 }
 
 .gallery-item {

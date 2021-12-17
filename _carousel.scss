@@ -38,12 +38,12 @@
       );
     }
 
-    #mirror {
-      position: relative;
+    > img {
+      position: absolute;
       opacity: 0.5;
       left: 0;
       transform: scaleY(-1);
-      transition: .5s ease-in-out;
+      transition: left .5s ease-in-out;
       -webkit-mask-image: -webkit-gradient(
         linear,
         left bottom,
@@ -52,7 +52,11 @@
         to(rgba(0, 0, 0, 0))
       );
       mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+      &#mirror-right {
+        left: 500px;
       }
+    }
   }
 }
 
