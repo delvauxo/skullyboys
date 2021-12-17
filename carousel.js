@@ -72,12 +72,15 @@ class Carousel {
         e.preventDefault();
         
         let currentItemSrc = '';
-        // galleryItemMirror.style.left = '-1500px';
-        (e.target.innerText === 'Next') ? currentItemSrc = this.carouselArray[3].src : currentItemSrc = this.carouselArray[1].src
+        galleryItemMirror.style.left = '1500px';
+        (e.target.innerText === 'Next') ? (
+          currentItemSrc = this.carouselArray[3].src,
+          galleryItemMirror.style.left = '-1500px'
+          ) : currentItemSrc = this.carouselArray[1].src
         // Update the src attribute URL of the current image.
         setTimeout(() => {
           galleryItemMirror.setAttribute('src', currentItemSrc);
-          // galleryItemMirror.style.left = '0';
+          galleryItemMirror.style.left = '0';
         }, 200);
 
         if (control.className == 'gallery-controls-add') {
