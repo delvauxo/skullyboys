@@ -73,6 +73,15 @@ body {
   font-size: 1.6rem;
 }
 
+img {
+  display: none;
+}
+
+
+img[src] {
+ display: block;
+}
+
 header {
   padding: 100px 50px 0 50px;
   height: 100vh;
@@ -174,6 +183,7 @@ nav {
   > ul {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 25px;
   }
   #logo a {
     max-width: 60px;
@@ -247,9 +257,17 @@ main section {
   background: rgba(0, 0, 0, .5);
   font-family: 'noah_regular';
   font-size: 2rem;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, .25)) 1;
 
   &:first-of-type {
-    margin-top: 0;
+    border-top: 1px solid;
+    border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, .25)) 1;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid;
   }
 
   > *:not(:first-child) {
@@ -270,10 +288,11 @@ main section {
       left: 50%;
       bottom: -75%;
       transform: translateX(-50%);
-      width: 33%;
+      width: 50%;
       margin: 0 auto;
       height: 2px;
-      background-color: #ff00cc;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #f0c 49%, rgba(255, 255, 255, 0) 100%);
+      
     }
   }
 
@@ -297,7 +316,7 @@ main section {
 
     &:hover::after {
       color: #ff00cc;
-      text-shadow: 0 20px 20px #fff, 0 0 2px #ff4da6    
+      text-shadow: 0 20px 20px #fff, 0 0 2px #ff4da6;
     }
 
     &::after {
@@ -313,46 +332,8 @@ main section {
     }
   }
 
-  &#carrousel {
-    ul#c {
-      width: 800px;
-      height: 200px; 
-      margin: 0 auto;
-      position: relative;
-      left: 0;
-      top: 0;
-    }
-   
-    ul#c > li {
-      width: 25%;
-      list-style-type: none;
-      position: absolute;
-      top: 0;
-      padding: 20px;
-      height: 200px; 
-      opacity: 1;
-      padding-top: 40px;
-      text-align: center;
-      transition: 1s opacity; 
-    }
-  
-    .active {
-      opacity: 1;
-    }
-    
-    p {
-      font-family: sans-serif;
-      font-size: 13px;
-      color: #646566;
-      line-height: 1.5em;
-    }
-  
-    strong { 
-      color: #fff;
-      font-weight: 700;
-      font-size: 60px; 
-      line-height: 100px; 
-    }
+  &#carousel {
+    overflow: hidden;
   }
 
   &::after {
