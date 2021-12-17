@@ -664,9 +664,12 @@ main section::after {
 
 .gallery-container > #mirror-container #mirror {
   position: relative;
-  opacity: 0.15;
+  opacity: 0.5;
+  left: 0;
   -webkit-transform: scaleY(-1);
           transform: scaleY(-1);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
   -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
   -webkit-mask-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
           mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
