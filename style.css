@@ -646,18 +646,13 @@ main section::after {
   height: 300px;
   width: 300px;
   z-index: 0;
-  -webkit-transform: scaleY(-1);
-          transform: scaleY(-1);
-  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
-  -webkit-mask-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
-          mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
-          mask-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+  overflow-x: hidden;
 }
 
 .gallery-container > #mirror-container::before {
   content: "";
   position: absolute;
-  bottom: 1px;
+  top: 1px;
   width: 100%;
   height: 1px;
   background-color: transparent;
@@ -668,7 +663,14 @@ main section::after {
 }
 
 .gallery-container > #mirror-container #mirror {
-  opacity: 0.35;
+  position: relative;
+  opacity: 0.15;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
+  -webkit-mask-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+          mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
+          mask-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
 }
 
 .gallery-item {
