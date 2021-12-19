@@ -663,21 +663,18 @@ main section::after {
 }
 
 .gallery-container > #mirror-container > img {
+  height: 100%;
   position: absolute;
-  opacity: 0.5;
   left: 0;
   -webkit-transform: scaleY(-1);
           transform: scaleY(-1);
-  -webkit-transition: left .5s ease-in-out;
-  transition: left .5s ease-in-out;
-  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
-  -webkit-mask-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
-          mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
-          mask-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+  opacity: .25;
+  -webkit-transition: opacity .45s ease-in-out;
+  transition: opacity .45s ease-in-out;
 }
 
-.gallery-container > #mirror-container > img#mirror-right {
-  left: 500px;
+.gallery-container > #mirror-container > img.transparent {
+  opacity: 0;
 }
 
 .gallery-item {

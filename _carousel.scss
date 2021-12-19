@@ -39,22 +39,23 @@
     }
 
     > img {
+      height: 100%;
       position: absolute;
-      opacity: 0.5;
       left: 0;
       transform: scaleY(-1);
-      transition: left .5s ease-in-out;
-      -webkit-mask-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        from(rgba(0, 0, 0, 1)),
-        to(rgba(0, 0, 0, 0))
-      );
-      mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+      opacity: .25;
+      transition: opacity .45s ease-in-out;
+      // -webkit-mask-image: -webkit-gradient(
+      //   linear,
+      //   left bottom,
+      //   left top,
+      //   from(rgba(0, 0, 0, 1)),
+      //   to(rgba(0, 0, 0, 0))
+      // );
+      // mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 
-      &#mirror-right {
-        left: 500px;
+      &.transparent {
+      opacity: 0;
       }
     }
   }

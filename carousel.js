@@ -2,8 +2,8 @@ const galleryContainer = document.querySelector('.gallery-container');
 const galleryControlsContainer = document.querySelector('.gallery-controls');
 const galleryControls = ['previous', 'next'];
 const galleryItems = document.querySelectorAll('.gallery-item');
-const galleryItemMirrorLeft = document.querySelector('.gallery-container #mirror-left')
-const galleryItemMirrorRight = document.querySelector('.gallery-container #mirror-right')
+const galleryItemMirrorTop = document.querySelector('.gallery-container #mirror-top')
+const galleryItemMirrorBottom = document.querySelector('.gallery-container #mirror-bottom')
 
 class Carousel {
   constructor(container, items, controls) {
@@ -71,23 +71,29 @@ class Carousel {
       control.addEventListener('click', e => {
         e.preventDefault();
         
-        let currentItemSrc = '';
-        (e.target.innerText === 'Next') ? (
-          currentItemSrc = this.carouselArray[3].src,
-          galleryItemMirrorLeft.style.left = '-1500px',
-          galleryItemMirrorRight.style.left = '0',
-          galleryItemMirrorRight.setAttribute('src', currentItemSrc)
-        ) : (
-          currentItemSrc = this.carouselArray[1].src,
-          galleryItemMirrorLeft.style.left = '0',
-          galleryItemMirrorRight.style.left = '500px',
-          galleryItemMirrorLeft.setAttribute('src', currentItemSrc)
-        )
-        // Update the src attribute URL of the current image.
-        // setTimeout(() => {
-          // galleryItemMirrorLeft.setAttribute('src', currentItemSrc);
-          // galleryItemMirrorRight.setAttribute('src', currentItemSrc);
-        // }, 200);
+        // Toggle transparent class.
+        function fadeEffect() {
+          return new Promise(resolve => {
+            galleryItemMirrorTop.classList.toggle('transparent')
+            galleryItemMirrorBottom.classList.toggle('transparent')
+          })
+        }
+        
+        async function changeSrc() {
+          let currentItemSrc = '';
+          if (e.target.innerText === 'Next') {
+            currentItemSrc = document.querySelector('.gallery-item-4').src
+          } else {
+            currentItemSrc = document.querySelector('.gallery-item-2').src
+          }
+          const transp = document.querySelector('#mirror-container .transparent')
+          transp.setAttribute('src', currentItemSrc)
+          await fadeEffect()
+        }
+        
+        // Change src of mirror img.
+        changeSrc();
+
 
         if (control.className == 'gallery-controls-add') {
           const newItem = document.createElement('img');
