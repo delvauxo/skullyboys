@@ -241,7 +241,7 @@ html::before {
   z-index: -1;
   grid-area: video;
   min-width: 100vw;
-  max-width: 100vh;
+  max-width: 100vw;
   min-height: 100vh;
   max-height: 100vh;
   -o-object-fit: cover;
@@ -250,7 +250,7 @@ html::before {
   background-attachment: fixed;
   background-position: 50%;
   background-repeat: repeat;
-  background-size: 110% auto;
+  background-size: 100% auto;
   filter: hue-rotate(99deg) brightness(1) saturate(6.5);
   -webkit-filter: hue-rotate(99deg) brightness(1) saturate(6.5);
   position: fixed;
@@ -493,6 +493,11 @@ img {
      object-fit: contain;
 }
 
+main {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
 main section {
   position: relative;
   max-width: 1200px;
@@ -518,12 +523,14 @@ main section {
   border-right: 1px solid;
   -o-border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
      border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
+  scroll-snap-align: start;
 }
 
 main section:first-of-type {
   border-top: 1px solid;
   -o-border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
      border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
+  margin-top: 0;
 }
 
 main section:last-of-type {
@@ -618,6 +625,17 @@ main section::after {
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0.04;
+}
+
+.scroller {
+  height: 100vh;
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+  scroll-snap-align: start;
 }
 
 .gallery {
