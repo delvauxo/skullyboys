@@ -2,7 +2,7 @@
     $(function () {
   
   
-      $(window).on('scroll', function () {
+      $('.scroller').on('scroll', function () {
         fnOnScroll();
       });
   
@@ -11,7 +11,7 @@
       });
   
   
-      var agTimeline = $('.js-timeline'),
+      let agTimeline = $('.js-timeline'),
         agTimelineLine = $('.js-timeline_line'),
         agTimelineLineProgress = $('.js-timeline_line-progress'),
         agTimelinePoint = $('.js-timeline-card_point-box'),
@@ -22,7 +22,7 @@
         agFlag = false;
   
       function fnOnScroll() {
-        agPosY = $(window).scrollTop();
+        agPosY = $('.scroller').scrollTop();
   
         fnUpdateFrame();
       }
@@ -46,16 +46,16 @@
       }
   
       function fnUpdateProgress() {
-        var agTop = agTimelineItem.last().find(agTimelinePoint).offset().top;
+        let agTop = agTimelineItem.last().find(agTimelinePoint).offset().top;
   
         i = agTop + agPosY - $(window).scrollTop();
-        a = agTimelineLineProgress.offset().top + agPosY - $(window).scrollTop();
+        a = agTimelineLineProgress.offset().top + agPosY - ($(window).scrollTop())/2;
         n = agPosY - a + agOuterHeight / 2;
         i <= agPosY + agOuterHeight / 2 && (n = i - a);
         agTimelineLineProgress.css({height: n + "px"});
-  
+
         agTimelineItem.each(function () {
-          var agTop = $(this).find(agTimelinePoint).offset().top;
+          let agTop = $(this).find(agTimelinePoint).offset().top;
   
           (agTop + agPosY - $(window).scrollTop()) < agPosY + .5 * agOuterHeight ? $(this).addClass('js-ag-active') : $(this).removeClass('js-ag-active');
         })

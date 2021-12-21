@@ -17,10 +17,11 @@ body {
     padding: 0;
     top: 7rem;
     position: relative;
+    overflow-x: hidden;
   }
   .ag-timeline_item {
     margin: 0 0 50px;
-  
+    padding: 0 50px;
     position: relative;
   }
   .ag-timeline_item:nth-child(2n) {
@@ -67,7 +68,7 @@ body {
   }
   .ag-timeline-card_point-box {
     display: inline-block;
-    margin: 0 14px 0 -28px;
+    margin: 0 14px 0 -26px;
   }
   .ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
     margin: 0 -28px 0 14px;
@@ -80,7 +81,7 @@ body {
     background-color: #1d1d1b;
   
     text-align: center;
-    font-family: 'ESL Legend', sans-serif;
+    // font-family: 'ESL Legend', sans-serif;
     font-size: 20px;
     color: #FFF;
   
@@ -97,16 +98,14 @@ body {
   }
   .ag-timeline-card_meta {
     margin: 10px 0 0;
-  
-    font-family: 'ESL Legend', sans-serif;
-    font-weight: bold;
+    text-transform: uppercase;
     font-size: 28px;
     color: #FF00CC;
   }
   .ag-timeline-card_item {
     display: inline-block;
-    width: 45%;
-    margin: -77px 0 0;
+    width: 43%;
+    margin: -75px 0 0;
     background-color: #282828;
   
     opacity: 0;
@@ -155,12 +154,14 @@ body {
     height: 18px;
     width: 18px;
     margin-top: 20px;
-    background-color: #282828;
+    background-color: rgba(0, 0, 0, .5);
   
     z-index: -1;
     position: absolute;
     top: 0;
     right: 0;
+    border: 2px solid;
+    border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 3;
   
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -188,7 +189,7 @@ body {
     display: none;
     margin: 10px 0 0;
   
-    font-family: 'ESL Legend', sans-serif;
+    // font-family: 'ESL Legend', sans-serif;
     font-weight: bold;
     font-size: 28px;
     color: #FF00CC;
