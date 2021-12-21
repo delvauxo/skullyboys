@@ -6,7 +6,7 @@
         fnOnScroll();
       });
   
-      $(window).on('resize', function () {
+      $('.scroller').on('resize', function () {
         fnOnResize();
       });
   
@@ -28,7 +28,7 @@
       }
   
       function fnOnResize() {
-        agPosY = $(window).scrollTop();
+        agPosY = $('.scroller').scrollTop();
         agHeight = $(window).height();
   
         fnUpdateFrame();

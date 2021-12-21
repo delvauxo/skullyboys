@@ -32,9 +32,6 @@ html {
   font-size: 62.5%;
   position: relative;
   color: rgb(226, 232, 236);
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: #f0c #2c2c2c;
   &::before {
     content: "";
     background: url(./img/background.webp) fixed;
@@ -248,6 +245,9 @@ main {
   &.scroller {
     height: 100vh;
     overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #f0c #2c2c2c;
     scroll-snap-type: y mandatory;
   }
 }

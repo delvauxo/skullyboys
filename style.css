@@ -223,9 +223,6 @@ html {
   font-size: 62.5%;
   position: relative;
   color: #e2e8ec;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: #f0c #2c2c2c;
 }
 
 html::before {
@@ -496,6 +493,9 @@ img {
 main.scroller {
   height: 100vh;
   overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #f0c #2c2c2c;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
 }
