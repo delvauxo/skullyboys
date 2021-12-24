@@ -9,6 +9,9 @@
     <script src="carousel.js" defer></script>
     <script src="jquery-3.6.0.slim.min.js" defer></script>
     <script src="timeline.js" defer></script>
+    <script src="chart.js" defer></script>
+    <script src="chart.utils.js" defer></script>
+    <script src="chart.cfg.js" defer></script>
     <title>Skully Boys ☠️ Join us in the Skully Boys Bones Club 🦴 as we take over the world 🚀</title>
   </head>
   <body>
@@ -556,7 +559,9 @@
       </section>      
       <section id="token">
         <h2>Token metrics</h2>
-        <div class="img--container"></div>
+        <div class="img--container">
+          <canvas id="myChart" width="500" height="500"></canvas>
+        </div>
       </section>
       <section id="faqs">
         <h2>Faq's</h2>
