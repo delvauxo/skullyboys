@@ -4,7 +4,7 @@ const DATA_COUNT = VALUES.length;
 const NUMBER_CFG = {
   count: DATA_COUNT,
   values: VALUES,
-  decimals: 2,
+  decimals: 1,
   percent: true,
 };
 
@@ -18,21 +18,12 @@ const data = {
         Samples.utils.transparentize(23, 0, 19, 1),
         Samples.utils.transparentize(43, 0, 34, 1),
         Samples.utils.transparentize(128, 0, 102, 1),
-        Samples.utils.transparentize(213, 0, 170, 1),
+        Samples.utils.transparentize(185, 0, 148, 1),
         Samples.utils.transparentize(255, 0, 204, 1),
       ],
       borderColor: "rgba(0, 0, 0, .5)",
     },
   ],
-};
-
-// Tooltip display percentage.
-const footer = (tooltipItems) => {
-  let value = 0;
-  tooltipItems.forEach(function (tooltipItem) {
-    value = tooltipItem.parsed;
-  });
-  return "Percent: " + value + "%";
 };
 
 const config = {
@@ -41,18 +32,26 @@ const config = {
   options: {
     responsive: true,
     plugins: {
+      // Display legend at bottom of the chart.
       legend: {
         position: "bottom",
-      },
-      title: {
-        display: false,
-        text: "Chart.js Doughnut Chart",
+        reverse: true
       },
       // Tooltip display percentage function call.
       tooltip: {
         callbacks: {
-          footer: footer,
-        },
+          label: function(context) {
+            var label = '';
+            if (NUMBER_CFG.percent) {
+              if (context.parsed !== null) {
+                label += context.label + ' : ' + context.formattedValue + '%';
+              }
+            } else {
+              label += context.label + ' : ' + context.formattedValue
+            }
+            return label;
+          }
+        }
       },
     },
   },
