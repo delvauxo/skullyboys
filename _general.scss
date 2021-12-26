@@ -290,7 +290,7 @@ main section {
   }
 
   > *:not(:first-child) {
-    margin-top: 5rem;
+    margin-top: 7.5rem;
   }
 
   h2 {
@@ -389,7 +389,7 @@ main section {
         border: 1px solid;
         border-bottom: 0px solid transparent;
         border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(0, 0, 0, .65);
         transition: background .25s ease-in-out;
 
         &:hover {
@@ -425,7 +425,7 @@ main section {
         text-align: left;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 300ms ease;
+        transition: max-height 300ms ease, max-height 300ms ease;
       }
 
       &:last-of-type .question {

@@ -551,7 +551,7 @@ main section:last-of-type {
 }
 
 main section > *:not(:first-child) {
-  margin-top: 5rem;
+  margin-top: 7.5rem;
 }
 
 main section h2 {
@@ -644,7 +644,7 @@ main section#faqs .sb-accordion-item .question {
   border-bottom: 0px solid transparent;
   -o-border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
      border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.65);
   -webkit-transition: background .25s ease-in-out;
   transition: background .25s ease-in-out;
 }
@@ -679,8 +679,8 @@ main section#faqs .sb-accordion-item p {
   text-align: left;
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 300ms ease;
-  transition: max-height 300ms ease;
+  -webkit-transition: max-height 300ms ease, max-height 300ms ease;
+  transition: max-height 300ms ease, max-height 300ms ease;
 }
 
 main section#faqs .sb-accordion-item:last-of-type .question {
