@@ -118,12 +118,13 @@
 .gallery-controls button {
   background-color: transparent;
   border: 0;
-  color: white;
+  color: transparent;
   cursor: pointer;
   font-size: 16px;
   margin: 0 20px;
   padding: 0 12px;
   text-transform: capitalize;
+  width: 0;
 }
 
 .gallery-controls button:focus {
@@ -135,7 +136,8 @@
 }
 
 .gallery-controls-previous::before {
-  border: solid #000;
+  background-color: rbga(0, 0, 0, .5);
+  border: solid #ff00cc;
   border-width: 0 2px 2px 0;
   content: "";
   display: inline-block;
@@ -158,7 +160,7 @@
 }
 
 .gallery-controls-next::before {
-  border: solid #000;
+  border: solid #ff00cc;
   border-width: 0 2px 2px 0;
   content: "";
   display: inline-block;
