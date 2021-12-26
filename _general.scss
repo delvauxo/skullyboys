@@ -378,6 +378,62 @@ main section {
     padding-bottom: 150px;
   }
 
+  &#faqs {
+    padding: 0 150px;
+  
+    .sb-accordion-item {
+      
+      .question {
+        position: relative;
+        padding: 15px 25px;
+        border: 1px solid;
+        border-bottom: 0px solid transparent;
+        border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
+        background-color: rgba(0, 0, 0, .5);
+        transition: background .25s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          background-color: darken(#ff00cc, 20%);
+        }
+        
+        &::after {
+          content: '+';
+          position: absolute;
+          right: 25px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+            
+      &.active  {
+
+        .question {
+          background-color: darken(#ff00cc, 10%);
+        }
+
+        .question::after {
+          content: '-';
+        }
+
+        p {
+          margin: 25px;
+        }
+      }
+      
+      p {
+        text-align: left;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 300ms ease;
+      }
+
+      &:last-of-type .question {
+        border-bottom: 1px solid;
+      }
+    }
+  }
+
   &::after {
     content: "";
     position: absolute;
