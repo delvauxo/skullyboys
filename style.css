@@ -219,6 +219,20 @@ table {
   }
 }
 
+@-webkit-keyframes spin {
+  50% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes spin {
+  50% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
 html {
   font-size: 62.5%;
   position: relative;
@@ -638,7 +652,7 @@ main section#skully-gallery #skully-gallery-items {
 }
 
 main section#skully-gallery #skully-gallery-items > * {
-  max-width: 15%;
+  max-width: 20%;
   border: 1px solid;
   -o-border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
      border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
@@ -659,7 +673,7 @@ main section#skully-hands-gallery #skully-hands-gallery-items {
 }
 
 main section#skully-hands-gallery #skully-hands-gallery-items > * {
-  max-width: 15%;
+  max-width: 20%;
   border: 1px solid;
   -o-border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
      border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
@@ -667,11 +681,23 @@ main section#skully-hands-gallery #skully-hands-gallery-items > * {
 
 main section#timeline {
   padding-top: 150px;
-  padding-bottom: 500px;
+  padding-bottom: 450px;
+}
+
+main section#timeline .ag-timeline-card_item {
+  background-color: #000000;
+  border: 1px solid;
+  -o-border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
+     border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
+}
+
+main section#timeline .ag-timeline-card_item .ag-timeline-card_img-box img {
+  height: 220px;
 }
 
 main section#faqs {
   padding: 0 150px;
+  padding-bottom: 70px;
 }
 
 main section#faqs .sb-accordion-item .question {
@@ -724,6 +750,20 @@ main section#faqs .sb-accordion-item:last-of-type .question {
   border-bottom: 1px solid;
 }
 
+main section#faqs > img {
+  max-width: 15rem;
+  -webkit-animation: spin 64s infinite;
+          animation: spin 64s infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
 main section::after {
   content: "";
   position: absolute;
@@ -734,6 +774,14 @@ main section::after {
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0.04;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding: 25px 0;
+  width: 100%;
 }
 
 .gallery {

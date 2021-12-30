@@ -26,6 +26,12 @@
   }
 }
 
+@keyframes spin{
+  50% {
+      transform: rotate(1turn);
+  }
+}
+
 // General.
 
 html {
@@ -377,7 +383,7 @@ main section {
       gap: 20px;
 
       > * {
-        max-width: 15%;
+        max-width: 20%;
         border: 1px solid;
         border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
       }
@@ -393,7 +399,7 @@ main section {
       gap: 20px;
 
       > * {
-        max-width: 15%;
+        max-width: 20%;
         border: 1px solid;
         border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
       }
@@ -402,11 +408,25 @@ main section {
 
   &#timeline {
     padding-top: 150px;
-    padding-bottom: 500px;
+    padding-bottom: 450px;
+
+    .ag-timeline-card_item {
+      background-color: #000000;
+      border: 1px solid;
+      border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
+      
+      .ag-timeline-card_img-box {
+
+        img {
+          height: 220px;
+        }
+      }
+    }
   }
 
   &#faqs {
     padding: 0 150px;
+    padding-bottom: 70px;
   
     .sb-accordion-item {
       
@@ -459,6 +479,16 @@ main section {
         border-bottom: 1px solid;
       }
     }
+
+    > img {
+      max-width: 15rem;
+      animation: spin 64s infinite;
+          animation-timing-function: ease;
+      animation-timing-function: ease;
+      animation-timing-function: ease;
+      animation-timing-function: linear;
+      transition: 1s ease-out;
+    }
   }
 
   &::after {
@@ -472,4 +502,12 @@ main section {
     background-size: contain;
     opacity: 0.04;
   }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding: 25px 0;
+  width: 100%;
 }
