@@ -55,8 +55,8 @@ html {
   background-position: 50%;
   background-repeat: repeat;
   background-size: 100% auto;
-  filter: hue-rotate(99deg) brightness(1) saturate(6.5);
-  -webkit-filter: hue-rotate(99deg) brightness(1) saturate(6.5);
+  filter: brightness(0.5) sepia(1) saturate(500%) hue-rotate(270deg);
+  -webkit-filter: brightness(0.5) sepia(1) saturate(1000%) hue-rotate(290deg);
   position: fixed;
 }
 
@@ -255,7 +255,7 @@ main {
 main section {
   position: relative;
   max-width: 1200px;
-  margin: 25px auto;
+  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -280,7 +280,6 @@ main section {
   }
 
   &:nth-of-type(2) {
-    border-top: 1px solid;
     border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
     margin-top: 0;
   }
@@ -369,13 +368,41 @@ main section {
     }
   }
 
-  &#carousel {
-    overflow: hidden;
+  &#skully-gallery {
+
+    #skully-gallery-items {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+
+      > * {
+        max-width: 15%;
+        border: 1px solid;
+        border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
+      }
+    }
+  }
+
+  &#skully-hands-gallery {
+
+    #skully-hands-gallery-items {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+
+      > * {
+        max-width: 15%;
+        border: 1px solid;
+        border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
+      }
+    }
   }
 
   &#timeline {
     padding-top: 150px;
-    padding-bottom: 150px;
+    padding-bottom: 500px;
   }
 
   &#faqs {
