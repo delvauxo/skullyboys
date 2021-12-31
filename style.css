@@ -233,6 +233,34 @@ table {
   }
 }
 
+#loader {
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+#loader img {
+  max-width: 15rem;
+  -webkit-animation: spin 64s infinite;
+          animation: spin 64s infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
 html {
   font-size: 62.5%;
   position: relative;
