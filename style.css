@@ -1084,6 +1084,22 @@ img {
   background-color: #FF00CC;
 }
 
+.ag-timeline_list > .ag-timeline_item:nth-of-type(even) .ag-timeline-card_arrow {
+  border: 0;
+  -o-border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 3;
+     border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 3;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.ag-timeline_list > .ag-timeline_item:nth-of-type(odd) .ag-timeline-card_arrow {
+  border: 0;
+  -o-border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 3;
+     border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 3;
+  border-right: 1px solid;
+  border-top: 1px solid;
+}
+
 .ag-timeline-card_box {
   padding: 0 0 20px 50%;
 }
