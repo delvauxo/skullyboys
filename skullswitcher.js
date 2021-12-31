@@ -8,8 +8,6 @@ const skullsArray = [
 let count = 0
 window.setInterval(function () {
 
-    console.log(skullsArray[count]);
-
     $('img#skull').fadeOut(1000, function () {
         $('img#skull').attr('src', './img/' + skullsArray[count])
     }).fadeIn(1000)
