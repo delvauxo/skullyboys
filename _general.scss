@@ -34,6 +34,18 @@
 
 // General.
 
+.d-none-desktop {
+  @include desktop {
+    display: none;
+  }
+}
+
+.d-none-phone {
+  @include phone {
+    display: none;
+  }
+}
+
 #loader {
   position: absolute;
   z-index: 10;
@@ -65,6 +77,9 @@ html {
     position: fixed;
     inset: 0;
     z-index: -2;
+    @include phone {
+      background-size: 100vh auto;
+    }
   }
 }
 
@@ -112,7 +127,8 @@ img[src] {
   align-items: center;
   @include phone {
     height: max-content;
-    max-height: none;
+    max-height: 100vh;
+    overflow: hidden;
   }
   > #hero {
     display: flex;
@@ -130,6 +146,9 @@ img[src] {
     }
     .img--container {
       position: relative;
+      @include phone {
+        order: 1;
+      }
       img {
         @include phone {
           max-height: 90vh;
@@ -148,12 +167,19 @@ img[src] {
       justify-content: center;
       position: relative;
       max-height: 100%;
+      @include phone {
+        order: 0;
+      }
 
       #hero__title {
         width: 100%;
         max-height: 100%;
         padding: 0;
         position: relative;
+        @include phone {
+          max-height: 80%;
+          width: 80%;
+        }
         svg {
           width: 100%;
           height: 100%;
@@ -175,7 +201,7 @@ img[src] {
             transform: translate(20%, 30%);
             @include phone {
               font-size: 4.5vw;
-              transform: translate(-10%, 40%);
+              transform: translate(-20%, 40%);
             }
           }
         }
@@ -184,6 +210,10 @@ img[src] {
         font-size: 4rem;
         text-align: center;
         line-height: 3rem;
+        @include phone {
+          font-size: 2.3rem;
+          line-height: 2rem;
+        }
       }
     }
   }
@@ -210,6 +240,9 @@ nav {
     max-width: 60px;
     display: block;
     padding: 20px 0;
+    @include phone {
+      width: 28px;
+    }
 
     &:hover svg g .st0 {
       fill: #ff00cc;
@@ -294,6 +327,9 @@ main section {
   border-right: 1px solid;
   border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
   scroll-snap-align: start;
+  @include phone {
+    padding: 100px 0;
+  }
 
   &:first-of-type {
     margin-top: 0;
@@ -324,6 +360,10 @@ main section {
     letter-spacing: 0.25rem;
     position: relative;
     filter: drop-shadow(0 0 10px #ff00cc);
+    @include phone {
+      text-align: center;
+      line-height: 1.25;
+    }
 
     &::after {
       content: "";
@@ -341,6 +381,9 @@ main section {
         #f0c 49%,
         rgba(255, 255, 255, 0) 100%
       );
+      @include phone {
+        bottom: -40px;
+      }
     }
   }
 
@@ -348,6 +391,9 @@ main section {
     padding: 0 50px;
     line-height: 1.2;
     text-align: center;
+    @include phone {
+      padding: 0 20px;
+    }
   }
 
   a.skully-btn {
@@ -401,11 +447,20 @@ main section {
       flex-direction: row;
       justify-content: center;
       gap: 20px;
+      @include phone {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+        gap: 40px;
+      }
 
       > * {
         max-width: 20%;
         border: 1px solid;
         border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
+        @include phone {
+          max-width: 80%;
+        }
       }
     }
   }
@@ -417,11 +472,20 @@ main section {
       flex-direction: row;
       justify-content: center;
       gap: 20px;
+      @include phone {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+        gap: 40px;
+      }
 
       > * {
         max-width: 20%;
         border: 1px solid;
         border-image: radial-gradient(#ff00cc, rgba(0, 0, 0, 0.25)) 1;
+        @include phone {
+          max-width: 80%;
+        }
       }
     }
   }
@@ -447,6 +511,10 @@ main section {
   &#faqs {
     padding: 0 150px;
     padding-bottom: 70px;
+    @include phone {
+      padding: 0 25px;
+      padding-bottom: 70px;
+    }
   
     .sb-accordion-item {
       
@@ -485,6 +553,9 @@ main section {
 
         p {
           margin: 25px;
+          @include phone {
+            padding: 0;
+          }
         }
       }
       
@@ -508,6 +579,9 @@ main section {
       animation-timing-function: ease;
       animation-timing-function: linear;
       transition: 1s ease-out;
+      @include phone {
+        margin-top: 5rem;
+      }
     }
   }
 

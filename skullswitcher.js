@@ -18,9 +18,10 @@ preload(
     "https://www.skullyboys.io/img/broken_bones_skully_golden_landing.png",
     "https://www.skullyboys.io/img/glow_skully_landing.png",
     "https://www.skullyboys.io/img/broken_bones_skully_iron_landing.png",
-    "https://www.skullyboys.io/img/enraged_bones_skully_pink_landing.png"
-)
+    "https://www.skullyboys.io/img/enraged_bones_skully_pink_landing.png",
+    "https://www.skullyboys.io/img/skully_necklace.png"
 
+)
 
 let count = 0
 window.setInterval(function () {
