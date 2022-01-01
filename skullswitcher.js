@@ -5,6 +5,23 @@ const skullsArray = [
     'enraged_bones_skully_pink_landing.png',
 ]
 
+let images = [];
+function preload() {
+    for (let i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+
+//-- usage --//
+preload(
+    "https://www.skullyboys.io/img/broken_bones_skully_golden_landing.png",
+    "https://www.skullyboys.io/img/glow_skully_landing.png",
+    "https://www.skullyboys.io/img/broken_bones_skully_iron_landing.png",
+    "https://www.skullyboys.io/img/enraged_bones_skully_pink_landing.png"
+)
+
+
 let count = 0
 window.setInterval(function () {
 
@@ -20,3 +37,4 @@ window.setInterval(function () {
         count = 0
     }
 }, 6000)
+
